@@ -1,0 +1,8 @@
+make[1]: Entering directory '/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/SP_Flash_Tool_src_6.2228'
+cd ../_Output/linux/debug;pwd;make clean
+/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/_Output/linux/debug
+make[2]: Entering directory '/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/_Output/linux/debug'
+make[2]: *** No rule to make target 'clean'.  Stop.
+make[2]: Leaving directory '/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/_Output/linux/debug'
+make[1]: *** [Build/build-linux.mk:20: clean] Error 2
+make[1]: Leaving directory '/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/SP_Flash_Tool_src_6.2228'
