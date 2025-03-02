@@ -1,0 +1,3 @@
+{
+    "C_Cpp.intelliSenseEngine": "Disabled", // 禁用 C/C++ 扩展的 IntelliSense
+}
