@@ -1,43 +1,28 @@
-
 {
     "version": "0.2.0",
     "configurations": [
         {
             "name": "Debug SP Flash Tool",
-            "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
             "program": "/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/_Output/linux/debug/SPFlashToolV6",
-           "args": [
+            "args": [
                 "-f", "/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/flash.xml",
                 "-c", "download",
                 "-p", "5-1"
             ],
-            "stopAtEntry": true,
+            "stopOnEntry": true,
             "cwd": "/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/_Output/linux/debug/",
-            "environment": [
-                {
-                    "name": "LD_LIBRARY_PATH",
-                    "value": "/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/_Output/linux/debug/lib:${env:LD_LIBRARY_PATH}"
-                }
+            "env": {
+                "LD_LIBRARY_PATH": "/mnt/wsl/PHYSICALDRIVE1/Work/TestFW/sp_flash_tool/v6/_Output/linux/debug/lib:${env:LD_LIBRARY_PATH}"
+            },
+            "terminal": "external",
+            "initCommands": [
+                "settings set target.x86-disassembly-flavor intel"
             ],
-            "externalConsole": true,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Set Disassembly Flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ],
-            "miDebuggerPath": "/usr/bin/gdb",
-            "sourceFileMap": {
+            "sourceMap": {
                 "/mnt/wsl/PHYSICALDRIVE1/Work": "/mnt/wsl/PHYSICALDRIVE1/Work"
-            }
+            },
         }
     ]
 }
